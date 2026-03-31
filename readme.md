@@ -1,5 +1,14 @@
-//pass:[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="display: block; border-width:0; float: right" align="right" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>]
-pass:[<a rel="license" href="https://k8spatterns.com"><img alt="Kubernetes Patterns" style="display: block; border-width:0; float: right; width: 150px;" align="right" src="https://github.com/k8spatterns/k8spatterns.com/raw/master/static/images/cover-small.png" /></a>]
+# [Ибрам Билджин, Хасс Роланд] Паттерны Kubernetes: Шаблоны разработки облачных приложений. 2-е изд. [RUS, 2026]
+
+<img src="./img/Kubernetes-Patterns-Cover.webp" alt="Паттерны Kubernetes" height="256px" align="right">
+
+<br/>
+
+**Оригинальные исходники:**
+https://github.com/k8spatterns/examples/
+
+
+<br/>
 
 = Kubernetes Patterns - Examples
 
@@ -104,3 +113,11 @@ link:advanced/ImageBuilder/README.adoc[Image Builder] **[*]**::
 
 This work is licensed under a https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 International License]
 
+
+<br/><br/>
+
+---
+
+<br/>
+
+<a href="https://k8s.ru/">Предложить инженеру работу / подработку на проекте с kubernetes, microservices, machine learning, big data, golang</a>
