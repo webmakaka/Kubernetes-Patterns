@@ -9,15 +9,6 @@ https://github.com/k8spatterns/examples/
 
 <br/>
 
-- Foundational Patterns
-- Behavioral Patterns
-- Structural Patterns
-- Configuration Patterns
-- Security Patterns
-- Advanced Patterns
-
-<br/>
-
 ## Оглавление:
 
 **Часть 1: Основные паттерны (Foundational Patterns)**
