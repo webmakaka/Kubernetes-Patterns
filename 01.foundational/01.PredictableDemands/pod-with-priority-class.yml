@@ -12,23 +12,23 @@ metadata:
   name: random-generator
 spec:
   containers:
-  - image: k8spatterns/random-generator:1.0
-    name: random-generator
-    env:
-    - name: PATTERN
-      valueFrom:
-        # First Hard requirement for a config map to exist.
-        configMapKeyRef:
-          name: random-generator-config
-          key: pattern
-      # Enabling logging into the mounted volume
-    - name: LOG_FILE
-      value: /tmp/logs/random.log
-    volumeMounts:
-      - mountPath: /tmp/logs
-        name: log-volume
-    # Put the pod in this priority class
-    priorityClassName: high-priority
+    - image: k8spatterns/random-generator:1.0
+      name: random-generator
+      env:
+        - name: PATTERN
+          valueFrom:
+            # First Hard requirement for a config map to exist.
+            configMapKeyRef:
+              name: random-generator-config
+              key: pattern
+          # Enabling logging into the mounted volume
+        - name: LOG_FILE
+          value: /tmp/logs/random.log
+      volumeMounts:
+        - mountPath: /tmp/logs
+          name: log-volume
+      # Put the pod in this priority class
+      priorityClassName: high-priority
   volumes:
     - name: log-volume
       # Second hard requirement is that the specified persitent volume claim

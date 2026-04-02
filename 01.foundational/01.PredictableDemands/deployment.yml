@@ -14,17 +14,17 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: k8spatterns/random-generator:1.0
-        name: random-generator
-        ports:
-        - containerPort: 8080
-          protocol: TCP
-        resources:
-          # Initial resource request for CPU and memory
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          # Upper limit until we want our application to grow at max
-          limits:
-            cpu: 200m
-            memory: 200Mi
+        - image: k8spatterns/random-generator:1.0
+          name: random-generator
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources:
+            # Initial resource request for CPU and memory
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            # Upper limit until we want our application to grow at max
+            limits:
+              cpu: 200m
+              memory: 200Mi
