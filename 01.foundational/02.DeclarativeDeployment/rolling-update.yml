@@ -25,21 +25,21 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: k8spatterns/random-generator:1.0
-        name: random-generator
-        env:
-        - name: PATTERN
-          value: Declarative Deployment
-        ports:
-        - containerPort: 8080
-          protocol: TCP
-        # Readiness probes are very important for a RollingUpdate to work properly,
-        # so don't forget them
-        livenessProbe:
-          httpGet:
-            path: /actuator/health
-            port: 8080
-          initialDelaySeconds: 15
-        readinessProbe:
-          exec:
-            command: [ "stat", "/tmp/random-generator-ready" ]
+        - image: k8spatterns/random-generator:1.0
+          name: random-generator
+          env:
+            - name: PATTERN
+              value: Declarative Deployment
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          # Readiness probes are very important for a RollingUpdate to work properly,
+          # so don't forget them
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 15
+          readinessProbe:
+            exec:
+              command: ['stat', '/tmp/random-generator-ready']

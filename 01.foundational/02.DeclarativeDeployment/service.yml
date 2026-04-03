@@ -9,7 +9,7 @@ spec:
   selector:
     app: random-generator
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
   type: LoadBalancer

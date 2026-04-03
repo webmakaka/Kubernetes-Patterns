@@ -1,4 +1,4 @@
-# Predictable Demands
+# Предсказуемые требования (Predictable Demands)
 
 <br/>
 
@@ -45,14 +45,6 @@ spec:
       persistentVolumeClaim:
         claimName: random-generator-log
 EOF
-```
-
-<br/>
-
-```bash
-$ kubectl get pods
-NAME               READY   STATUS    RESTARTS   AGE
-random-generator   0/1     Pending   0          45s
 ```
 
 <br/>
@@ -150,6 +142,12 @@ random-generator   1/1     Running   0          5m12s
 <br/>
 
 ```bash
+$ sudo chmod -R 777 ./logs/
+```
+
+<br/>
+
+```bash
 $ POD_IP=$(kubectl get pod -l app=random-generator -o jsonpath='{.items[0].status.podIP}')
 ```
 
@@ -161,8 +159,20 @@ $ kubectl run -itq --rm --image=k8spatterns/curl-jq --restart=Never curl -- http
 
 <br/>
 
+```json
+{
+  "random": 1487317833,
+  "pattern": "Predictable Demands",
+  "id": "639c3090-1f9f-4730-8817-979a7718e414",
+  "version": "1.0"
+}
+```
+
+<br/>
+
 ```bash
 $ cat ./logs/random.log
+00:11:36.180,639c3090-1f9f-4730-8817-979a7718e414,12063,1487317833
 ```
 
 <br/>
