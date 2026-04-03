@@ -16,4 +16,4 @@ spec:
                 port: 8080
             readinessProbe:
               exec:
-                command: [ "stat", "/opt/random-generator-ready" ]
+                command: ['stat', '/opt/random-generator-ready']
