@@ -14,25 +14,25 @@ spec:
       # label. These nodes are then considered for being the
       # host of this Pod.
       requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-          matchLabels:
-            confidential: high
-        topologyKey: security-zone
+        - labelSelector:
+            matchLabels:
+              confidential: high
+          topologyKey: security-zone
     podAntiAffinity:
       # We don't want to run on any node where a pod with the
       # label 'confidential=none' is running, but if these are
       # the only available then its still ok to be scheduled
       # on such a node
       preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 100
-        podAffinityTerm:
-          labelSelector:
-            matchLabels:
-              confidential: none
-          topologyKey: kubernetes.io/hostname
+        - weight: 100
+          podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                confidential: none
+            topologyKey: kubernetes.io/hostname
   containers:
-  - image: k8spatterns/random-generator:1.0
-    name: random-generator
+    - image: k8spatterns/random-generator:1.0
+      name: random-generator
 ---
 # Placeholder Pod for attracting the random-generator Pod
 apiVersion: v1
@@ -43,5 +43,5 @@ metadata:
     confidential: high
 spec:
   containers:
-  - image: nginx
-    name: nginx
+    - image: nginx
+      name: nginx

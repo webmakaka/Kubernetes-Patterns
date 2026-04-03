@@ -21,7 +21,7 @@ metadata:
   name: random-generator-log
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 10Mi

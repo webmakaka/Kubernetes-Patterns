@@ -7,5 +7,5 @@ spec:
   selector:
     app: random-generator
   ports:
-  - name: http
-    port: 8080
+    - name: http
+      port: 8080

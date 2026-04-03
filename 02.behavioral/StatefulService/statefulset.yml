@@ -14,22 +14,22 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: k8spatterns/random-generator:1.0
-        name: random-generator
-        env:
-        - name: LOG_FILE
-          value: /opt/logs/random.log
-        ports:
-        - containerPort: 8080
-          name: http
-        volumeMounts:
-        - name: logs
-          mountPath: /opt/logs
+        - image: k8spatterns/random-generator:1.0
+          name: random-generator
+          env:
+            - name: LOG_FILE
+              value: /opt/logs/random.log
+          ports:
+            - containerPort: 8080
+              name: http
+          volumeMounts:
+            - name: logs
+              mountPath: /opt/logs
   volumeClaimTemplates:
-  - metadata:
-      name: logs
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 10Mi
+    - metadata:
+        name: logs
+      spec:
+        accessModes: ['ReadWriteOnce']
+        resources:
+          requests:
+            storage: 10Mi

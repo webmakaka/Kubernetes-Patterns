@@ -14,8 +14,8 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: k8spatterns/random-generator:1.0
-        name: random-generator
-        ports:
-        - containerPort: 8080
-          protocol: TCP
+        - image: k8spatterns/random-generator:1.0
+          name: random-generator
+          ports:
+            - containerPort: 8080
+              protocol: TCP

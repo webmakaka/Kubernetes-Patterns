@@ -7,7 +7,7 @@ spec:
   selector:
     app: random-generator
   ports:
-  - port: 8080
-    targetPort: 8080
-    protocol: TCP
-    nodePort: 32766
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      nodePort: 32766
