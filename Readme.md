@@ -14,11 +14,11 @@ https://github.com/k8spatterns/examples/
 **Часть 1: Основные паттерны (Foundational Patterns)**
 
 <ol>
-  <li>✅ Предсказуемые требования</li>
-  <li>✅ Декларативное развертывание</li>
-  <li>✅ Проверка работоспособности</li>
-  <li>✅ Управляемый жизненный цикл</li>
-  <li>Автоматическое размещение</li>
+  <li>✅ Предсказуемые требования (Predictable Demands)</li>
+  <li>✅ Декларативное развертывание (Declarative Deployment)</li>
+  <li>✅ Проверка работоспособности (Health Probe)</li>
+  <li>✅ Управляемый жизненный цикл (Managed Lifecycle)</li>
+  <li>✅ Автоматическое размещение (Automated Placement)</li>
 </ol>
 
 **Часть 2: Поведенческие паттерны (Behavioral Patterns)**
