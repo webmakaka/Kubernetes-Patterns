@@ -271,7 +271,6 @@ EOF
 $ kubectl get pod -o wide
 NAME                                READY   STATUS    RESTARTS   AGE   IP            NODE              NOMINATED NODE   READINESS GATES
 random-generator-69d966d6b7-srrch   1/1     Running   0          60s   10.244.0.31   marley-minikube   <none>           0/1
-
 ```
 
 <br/>
