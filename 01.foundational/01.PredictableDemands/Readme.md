@@ -3,7 +3,9 @@
 <br/>
 
 ```bash
-$ minikube start --mount --mount-string="$(pwd)/logs:/tmp/example" --memory 2G
+$ mkdir logs
+$ sudo chmod -R 777 ./logs/
+$ minikube --profile marley-minikube mount $(pwd)/logs:/tmp/example &
 ```
 
 <br/>
@@ -137,12 +139,6 @@ EOF
 $ kubectl get pods
 NAME               READY   STATUS    RESTARTS   AGE
 random-generator   1/1     Running   0          5m12s
-```
-
-<br/>
-
-```bash
-$ sudo chmod -R 777 ./logs/
 ```
 
 <br/>
