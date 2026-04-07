@@ -2,8 +2,7 @@
 
 <br/>
 
-https://kubernetes.io/docs/
-concepts/workloads/controllers/cron-jobs/
+https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 
 <br/>
 
