@@ -24,10 +24,10 @@ https://github.com/k8spatterns/examples/
 **Часть 2: Поведенческие паттерны (Behavioral Patterns)**
 
 <ol start="6">
-  <li>✅ Пакетное задание</li>
-  <li>✅ Периодическое задание</li>
-  <li>✅ Фоновый сервис</li>
-  <li>Сервис-одиночка</li>
+  <li>✅ Пакетное задание (Batch Job)</li>
+  <li>✅ Периодическое задание (Periodic Job)</li>
+  <li>✅ Фоновый сервис (Daemon Service)</li>
+  <li>✅ Сервис-одиночка (Singleton Service)</li>
   <li>Сервис без сохранения состояния</li>
   <li>Сервис с сохранением состояния</li>
   <li>Обнаружение сервисов</li>
