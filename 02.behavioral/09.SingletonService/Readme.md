@@ -21,7 +21,7 @@ kind-worker2         Ready    <none>          15s   v1.34.0
 **Now let’s create a Deployment with six Pods:**
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Deployment for random-generator service for starting up the random-generator
 apiVersion: apps/v1
 kind: Deployment
@@ -85,7 +85,7 @@ random-generator-f4d97b74d-thgk4   kind-worker2
 For being sure that always four Pods are running, we create a PodDisruptionBudget with
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Pod disruption budget
 ---
 apiVersion: policy/v1
@@ -157,3 +157,11 @@ $ kubectl scale deployment random-generator --replicas 6
 ```shell
 $ kind delete cluster
 ```
+
+<br/><br/>
+
+---
+
+<br/>
+
+<a href="https://k8s.ru/">Предложить инженеру работу / подработку на проекте с kubernetes, microservices, machine learning, big data, golang</a>

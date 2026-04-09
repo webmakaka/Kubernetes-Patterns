@@ -11,7 +11,7 @@ $ minikube --profile marley-minikube mount $(pwd)/logs:/tmp/example &
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Persistent volume mapping a hostPath. Works only on 1-node clusters like Minikube
 apiVersion: v1
 kind: PersistentVolume
@@ -46,7 +46,7 @@ EOF
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl create -f -
+$ cat << 'EOF' | kubectl create -f -
 # A Job resource
 ---
 apiVersion: batch/v1
@@ -112,7 +112,7 @@ $ kubectl delete jobs -l app=random-generator
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl create -f -
+$ cat << 'EOF' | kubectl create -f -
 # An indexed job that splits up a file
 # Run this job after job.yaml
 ---

@@ -3,7 +3,7 @@
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # DaemonSet resource
 ---
 apiVersion: apps/v1

@@ -15,7 +15,7 @@ $ minikube --profile marley-minikube mount $(pwd)/logs:/tmp/example &
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Persistent volume mapping a hostPath. Works only on 1-node clusters like Minikube
 apiVersion: v1
 kind: PersistentVolume
@@ -50,7 +50,7 @@ EOF
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl create -f -
+$ cat << 'EOF' | kubectl create -f -
 apiVersion: batch/v1
 kind: CronJob
 metadata:

@@ -3,7 +3,7 @@
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Deployment for starting up the random-generator with liveness and readiness probes
 apiVersion: apps/v1
 kind: Deployment
@@ -159,7 +159,7 @@ $ curl -s http://localhost:8080/toggle-ready
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Deployment for starting up the random-generator with liveness, readiness, and startup probes
 apiVersion: apps/v1
 kind: Deployment
@@ -231,7 +231,7 @@ $ kubectl delete deployment random-generator
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Deployment for starting up the random-generator with liveness, readiness, and startup probes
 apiVersion: apps/v1
 kind: Deployment

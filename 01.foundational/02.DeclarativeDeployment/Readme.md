@@ -3,7 +3,7 @@
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # A rolling update Deployment
 apiVersion: apps/v1
 kind: Deployment
@@ -55,7 +55,7 @@ EOF
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Service object for accessing the example Deployment via Minikube's LoadBalancer
 # Alternatively you could also use a "NodePort" service to access the service over a
 # random IP or use Minikube's Ingress extension to acess the application
@@ -174,7 +174,7 @@ REVISION  CHANGE-CAUSE
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl replace -f -
+$ cat << 'EOF' | kubectl replace -f -
 # A recreate (or fixed) Deployment
 apiVersion: apps/v1
 kind: Deployment

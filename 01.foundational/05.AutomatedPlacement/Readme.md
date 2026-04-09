@@ -7,7 +7,7 @@
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Node selector example which only picks the node
 apiVersion: v1
 kind: Pod
@@ -69,7 +69,7 @@ $ kubectl delete pod node-selector
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Pod with node affinity 2
 apiVersion: v1
 kind: Pod
@@ -123,7 +123,7 @@ $ kubectl delete pod node-affinity
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Pod with Pod affinity
 apiVersion: v1
 kind: Pod
@@ -230,7 +230,7 @@ pod-affinity        0/1     Pending   0          39s
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Tolerations
 apiVersion: v1
 kind: Pod

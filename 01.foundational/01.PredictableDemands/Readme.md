@@ -15,7 +15,7 @@ $ minikube --profile marley-minikube mount $(pwd)/logs:/tmp/example &
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Resource limits
 apiVersion: v1
 kind: Pod
@@ -72,7 +72,7 @@ Events:
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # Persistent volume mapping a hostPath. Works only on 1-node clusters like Minikube
 apiVersion: v1
 kind: PersistentVolume
@@ -123,7 +123,7 @@ Events:
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -186,7 +186,7 @@ $ kubectl delete pv example
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # DeploymentConfig for starting up the random-generator
 apiVersion: apps/v1
 kind: Deployment

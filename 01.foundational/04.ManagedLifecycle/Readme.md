@@ -3,7 +3,7 @@
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 # DeploymentConfig for starting up the random-generator
 apiVersion: v1
 kind: Pod
