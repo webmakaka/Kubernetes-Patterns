@@ -6,13 +6,17 @@
 
 <br/>
 
+### Разбор примеров из книги
+
+<br/>
+
 ```shell
 $ minikube start --mount --mount-string="$(pwd)/logs:/tmp/example"
 ```
 
 <br/>
 
-Let’s create now two PersistentVolumes for the replicas of our StatefulSet later:
+Let’s create now two PersistentVolumes for the replicas of our StatefulSet:
 
 <br/>
 

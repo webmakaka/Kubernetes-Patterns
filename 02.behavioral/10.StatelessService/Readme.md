@@ -2,6 +2,14 @@
 
 <br/>
 
+<img src="../../img/chapter11-pic01.png">
+
+<br/>
+
+### Разбор примеров из книги
+
+<br/>
+
 ```shell
 $ minikube start --mount --mount-string="$(pwd)/logs:/tmp/example" --memory 2G
 ```

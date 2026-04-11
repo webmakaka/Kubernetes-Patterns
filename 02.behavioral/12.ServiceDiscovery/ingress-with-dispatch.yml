@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: random-generator
 spec:
-  rules: # <1>
+  rules:
     - http:
         paths:
           - path: /

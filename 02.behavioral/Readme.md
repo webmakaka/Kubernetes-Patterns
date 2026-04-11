@@ -9,7 +9,7 @@
   <li>✅ Сервис-одиночка (Singleton Service)</li>
   <li>✅ Сервис без сохранения состояния (Stateless Service)</li>
   <li>✅ Сервис с сохранением состояния (Stateful Service)</li>
-  <li>Обнаружение сервисов</li>
+  <li>✅ Обнаружение сервисов (Service Discovery)</li>
   <li>Самоанализ</li>
 </ol>
 
