@@ -6,10 +6,6 @@
 
 <br/>
 
-<img src="../../img/chapter13-pic02.png">
-
-<br/>
-
 ### Разбор примеров из книги
 
 <br/>
@@ -270,6 +266,10 @@ $ curl -s http://$ip:8080 | jq .
 <br/>
 
 ### Ingress
+
+<br/>
+
+<img src="../../img/chapter13-pic02.png">
 
 <br/>
 
