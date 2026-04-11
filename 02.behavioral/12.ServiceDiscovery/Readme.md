@@ -2,11 +2,11 @@
 
 <br/>
 
-<img src="../../img/chapter12-pic01.png">
+<img src="../../img/chapter13-pic01.png">
 
 <br/>
 
-<img src="../../img/chapter12-pic02.png">
+<img src="../../img/chapter13-pic02.png">
 
 <br/>
 
