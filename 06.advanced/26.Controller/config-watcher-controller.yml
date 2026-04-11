@@ -4,15 +4,14 @@ kind: ServiceAccount
 metadata:
   name: config-watcher-controller
 ---
-
 # Bind to 'edit' role to allow for watching resources and restarting pods
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: config-watcher-controller
 subjects:
-- kind: ServiceAccount
-  name: config-watcher-controller
+  - kind: ServiceAccount
+    name: config-watcher-controller
 roleRef:
   name: edit
   kind: ClusterRole
@@ -45,26 +44,26 @@ spec:
       # associated with the 'edit' role
       serviceAccountName: config-watcher-controller
       containers:
-      - name: kubeapi-proxy
-        image: k8spatterns/kubeapi-proxy
-      - name: config-watcher
-        image: k8spatterns/curl-jq
-        env:
-         # The operator watches the namespace in which the controller
-         # itself is installed (by using the Downward API)
-         - name: WATCH_NAMESPACE
-           valueFrom:
-             fieldRef:
-               fieldPath: metadata.namespace
-        command:
-        - "sh"
-        - "/watcher/config-watcher-controller.sh"
-        # Mount script from a config map for ease of change
-        volumeMounts:
-        - mountPath: "/watcher"
-          name: config-watcher-controller
+        - name: kubeapi-proxy
+          image: k8spatterns/kubeapi-proxy
+        - name: config-watcher
+          image: k8spatterns/curl-jq
+          env:
+            # The operator watches the namespace in which the controller
+            # itself is installed (by using the Downward API)
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - 'sh'
+            - '/watcher/config-watcher-controller.sh'
+          # Mount script from a config map for ease of change
+          volumeMounts:
+            - mountPath: '/watcher'
+              name: config-watcher-controller
       volumes:
-      # Volume holding the controller script
-      - name: config-watcher-controller
-        configMap:
-          name: config-watcher-controller
+        # Volume holding the controller script
+        - name: config-watcher-controller
+          configMap:
+            name: config-watcher-controller

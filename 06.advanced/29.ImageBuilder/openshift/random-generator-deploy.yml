@@ -14,26 +14,26 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: ' '
-        name: random-generator
-        ports:
-        - containerPort: 8080
-          protocol: TCP
+        - image: ' '
+          name: random-generator
+          ports:
+            - containerPort: 8080
+              protocol: TCP
   triggers:
-  # Redeploy when configuration changes
-  - type: ConfigChange
+    # Redeploy when configuration changes
+    - type: ConfigChange
 
-  # Redeploy when the image of the container 'random-generator' (the only container)
-  # changes. This happens after a build so that we have an automatic redeployment
-  # when a new build has been performed.
-  - imageChangeParams:
-      automatic: true
-      containerNames:
-      - random-generator
-      from:
-        kind: ImageStreamTag
-        name: random-generator-runtime:latest
-    type: ImageChange
+    # Redeploy when the image of the container 'random-generator' (the only container)
+    # changes. This happens after a build so that we have an automatic redeployment
+    # when a new build has been performed.
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+          - random-generator
+        from:
+          kind: ImageStreamTag
+          name: random-generator-runtime:latest
+      type: ImageChange
 ---
 # A service for exposing our random generator
 apiVersion: v1
@@ -44,9 +44,9 @@ spec:
   selector:
     app: random-generator
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
 ---
 # The route for accessing the service from externally.
 # Use `oc get route` to find out the URL

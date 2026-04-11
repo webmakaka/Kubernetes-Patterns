@@ -4,7 +4,7 @@ metadata:
   name: random-generator
 spec:
   updatePolicy:
-    updateMode: "Off"
+    updateMode: 'Off'
   targetRef:
     apiVersion: apps/v1
     kind: Deployment

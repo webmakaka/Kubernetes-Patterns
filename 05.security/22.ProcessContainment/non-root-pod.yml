@@ -7,8 +7,8 @@ spec:
     # Specify that all containers of this Pod are running as non-root
     runAsNonRoot: true
   containers:
-  - name: random
-    image: k8spatterns/random-generator:1.0
-    # You could also put runAsNonRoot into container's securityContext 
-    # securityContext:
-    #   runAsNonRoot: true
+    - name: random
+      image: k8spatterns/random-generator:1.0
+      # You could also put runAsNonRoot into container's securityContext
+      # securityContext:
+      #   runAsNonRoot: true

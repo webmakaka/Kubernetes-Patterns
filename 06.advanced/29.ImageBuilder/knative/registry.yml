@@ -14,11 +14,11 @@ spec:
         app: registry
     spec:
       containers:
-      - image: registry:2
-        name: registry
-        ports:
-        - containerPort: 5000
-          protocol: TCP
+        - image: registry:2
+          name: registry
+          ports:
+            - containerPort: 5000
+              protocol: TCP
 ---
 apiVersion: v1
 kind: Service
@@ -28,6 +28,6 @@ spec:
   selector:
     app: registry
   ports:
-  - port: 80
-    targetPort: 5000
-    protocol: TCP
+    - port: 80
+      targetPort: 5000
+      protocol: TCP

@@ -4,19 +4,19 @@ metadata:
   name: kaniko
 spec:
   containers:
-  - name: kaniko
-    image: gcr.io/kaniko-project/executor:latest
-    args:
-    - "--dockerfile=Dockerfile"
-    - "--context=dir:///build"
-    - "--insecure"
-    - "--destination=registry.kube-system.svc.cluster.local/k8spatterns/kubectl-proxy:kaniko"
-    volumeMounts:
-    - name: build-dir
-      mountPath: /build
+    - name: kaniko
+      image: gcr.io/kaniko-project/executor:latest
+      args:
+        - '--dockerfile=Dockerfile'
+        - '--context=dir:///build'
+        - '--insecure'
+        - '--destination=registry.kube-system.svc.cluster.local/k8spatterns/kubectl-proxy:kaniko'
+      volumeMounts:
+        - name: build-dir
+          mountPath: /build
   restartPolicy: Never
   volumes:
-  - name: build-dir
-    hostPath:
-      path: /build
-      type: Directory
+    - name: build-dir
+      hostPath:
+        path: /build
+        type: Directory

@@ -9,10 +9,10 @@ spec:
     name: random-generator
   maxReplicas: 20
   metrics:
-  - resource:
-      name: cpu
-      target:
-        averageUtilization: 50
-        type: Utilization
-    type: Resource
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 50
+          type: Utilization
+      type: Resource
   minReplicas: 1

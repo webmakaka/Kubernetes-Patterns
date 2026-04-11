@@ -10,4 +10,4 @@ metadata:
     # Warn about Pods that violate the restricted standard
     pod-security.kubernetes.io/warn: restricted
     # Version of the security-standard requirements to use for warnings (optional)
-    pod-security.kubernetes.io/warn-version: v1.26        
+    pod-security.kubernetes.io/warn-version: v1.26

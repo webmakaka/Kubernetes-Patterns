@@ -46,6 +46,7 @@ spec:
     # We are using a Docker build with the dockerfile above
     type: Docker
   triggers:
-  # Rebuild when we change this definition
-  - type: ConfigChange
+    # Rebuild when we change this definition
+    - type: ConfigChange
 ---
+

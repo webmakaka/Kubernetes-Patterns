@@ -2,7 +2,7 @@
 
 <br/>
 
-<img src="../img/chapter12-pic01.png">
+<img src="../../img/chapter12-pic01.png">
 
 <br/>
 

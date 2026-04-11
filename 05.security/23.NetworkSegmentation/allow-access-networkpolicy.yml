@@ -8,13 +8,12 @@ spec:
     matchLabels:
       app: random-generator
   ingress:
-  - from:
-    - podSelector:
-        # All Pods that carry "role: random-client" as label are allowed to access 
-        # our deployment
-        matchLabels:
-          role: random-client
-    ports:
-    - protocol: TCP
-      port: 8080
-
+    - from:
+        - podSelector:
+            # All Pods that carry "role: random-client" as label are allowed to access
+            # our deployment
+            matchLabels:
+              role: random-client
+      ports:
+        - protocol: TCP
+          port: 8080

@@ -4,13 +4,13 @@ metadata:
   name: egress-allow-internal-only
 spec:
   policyTypes:
-  # Type is needed here, otherwise it would also affect ingressesj
-  - Egress
+    # Type is needed here, otherwise it would also affect ingressesj
+    - Egress
   podSelector: {}
   egress:
-  # Only allow egress to all internal namespaces
-  - to:
-    - namespaceSelector: {}
+    # Only allow egress to all internal namespaces
+    - to:
+        - namespaceSelector: {}
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -18,15 +18,14 @@ metadata:
   name: allow-chucknorris
 spec:
   policyTypes:
-  - Egress
+    - Egress
   # This rule applies to all Pods
   podSelector: {}
   egress:
-  - to:
-    # Add here all IP adresses for api.chucknorris.io or any other service
-    # that you want allow
-    - ipBlock:
-        cidr: 104.21.41.162/32
-    - ipBlock:
-        cidr: 172.67.148.58/32
-        
+    - to:
+        # Add here all IP adresses for api.chucknorris.io or any other service
+        # that you want allow
+        - ipBlock:
+            cidr: 104.21.41.162/32
+        - ipBlock:
+            cidr: 172.67.148.58/32

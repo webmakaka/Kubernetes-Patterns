@@ -10,8 +10,8 @@ kind: RoleBinding
 metadata:
   name: config-watcher:edit
 subjects:
-- kind: ServiceAccount
-  name: config-watcher-operator
+  - kind: ServiceAccount
+    name: config-watcher-operator
 roleRef:
   name: edit
   kind: ClusterRole
@@ -22,8 +22,8 @@ kind: RoleBinding
 metadata:
   name: config-watcher:crd
 subjects:
-- kind: ServiceAccount
-  name: config-watcher-operator
+  - kind: ServiceAccount
+    name: config-watcher-operator
 roleRef:
   name: config-watcher-crd
   kind: Role
@@ -53,24 +53,24 @@ spec:
     spec:
       serviceAccountName: config-watcher-operator
       containers:
-      - name: kubeapi-proxy
-        image: k8spatterns/kubeapi-proxy
-      - name: config-watcher
-        image: k8spatterns/curl-jq
-        env:
-         # The operator watches the namespace in which the operator
-         # itself is installed (by using the Downward API)
-         - name: WATCH_NAMESPACE
-           valueFrom:
-             fieldRef:
-               fieldPath: metadata.namespace
-        command:
-        - "sh"
-        - "/watcher/config-watcher-operator.sh"
-        volumeMounts:
-        - mountPath: "/watcher"
-          name: config-watcher-operator
+        - name: kubeapi-proxy
+          image: k8spatterns/kubeapi-proxy
+        - name: config-watcher
+          image: k8spatterns/curl-jq
+          env:
+            # The operator watches the namespace in which the operator
+            # itself is installed (by using the Downward API)
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - 'sh'
+            - '/watcher/config-watcher-operator.sh'
+          volumeMounts:
+            - mountPath: '/watcher'
+              name: config-watcher-operator
       volumes:
-      - name: config-watcher-operator
-        configMap:
-          name: config-watcher-operator
+        - name: config-watcher-operator
+          configMap:
+            name: config-watcher-operator

@@ -6,14 +6,14 @@ spec:
   # Match all pods that have a lbel "has-metrics
   selector:
     matchLabels:
-      has-metrics: "true"
+      has-metrics: 'true'
   action: ALLOW
   rules:
-  # Allow for all Pods that want to acess the "/actuator/health" endpoint
-  - from:
-    - source:
-        namespaces: [ "default" ]
-    to:
-    - operation:
-        methods: ["GET"]
-        paths: ["/actuator/health"]
+    # Allow for all Pods that want to acess the "/actuator/health" endpoint
+    - from:
+        - source:
+            namespaces: ['default']
+      to:
+        - operation:
+            methods: ['GET']
+            paths: ['/actuator/health']

@@ -14,12 +14,12 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: registry:80/k8spatterns/random-generator
-        imagePullPolicy: Always
-        name: random-generator
-        ports:
-        - containerPort: 8080
-          protocol: TCP
+        - image: registry:80/k8spatterns/random-generator
+          imagePullPolicy: Always
+          name: random-generator
+          ports:
+            - containerPort: 8080
+              protocol: TCP
 ---
 # A service for exposing our random generator
 apiVersion: v1
@@ -30,9 +30,9 @@ spec:
   selector:
     app: random-generator
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
 ---
 # The ingress for accessing the service from externally.
 # Use `kubectl get ingress` to find out the URL

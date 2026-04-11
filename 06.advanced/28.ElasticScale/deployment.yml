@@ -14,16 +14,16 @@ spec:
         app: random-generator
     spec:
       containers:
-      - image: k8spatterns/random-generator:1.0
-        name: random-generator
-        resources:
-          requests:
-            # Reserve 200 milli cores for this pod
-            cpu: 200m
-            memory: 200Mi
-        ports:
-        - containerPort: 8080
-          protocol: TCP
+        - image: k8spatterns/random-generator:1.0
+          name: random-generator
+          resources:
+            requests:
+              # Reserve 200 milli cores for this pod
+              cpu: 200m
+              memory: 200Mi
+          ports:
+            - containerPort: 8080
+              protocol: TCP
 ---
 # A service for exposing our random generator
 apiVersion: v1
@@ -34,7 +34,7 @@ spec:
   selector:
     app: random-generator
   ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 8080
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
   type: NodePort

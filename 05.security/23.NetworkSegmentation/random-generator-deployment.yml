@@ -11,10 +11,10 @@ spec:
     metadata:
       labels:
         app: random-generator
-        has-metrics: "true"
+        has-metrics: 'true'
     spec:
       containers:
-      - name: random-generator
-        image: k8spatterns/random-generator:1.0
-        ports:
-        - containerPort: 8080
+        - name: random-generator
+          image: k8spatterns/random-generator:1.0
+          ports:
+            - containerPort: 8080

@@ -4,8 +4,8 @@ metadata:
   name: privileged
 spec:
   containers:
-  - name: app
-    image: k8spatterns/random-generator:1.0    
-    securityContext:
-      # Privileged is now allowed for a baseline security profile
-      privileged: true
+    - name: app
+      image: k8spatterns/random-generator:1.0
+      securityContext:
+        # Privileged is now allowed for a baseline security profile
+        privileged: true

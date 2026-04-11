@@ -5,9 +5,9 @@ kind: ConfigMap
 metadata:
   name: webapp-config
   annotations:
-    k8spatterns.com/podDeleteSelector: "app=webapp"
+    k8spatterns.com/podDeleteSelector: 'app=webapp'
 data:
-  message: "Welcome to Kubernetes Patterns !"
+  message: 'Welcome to Kubernetes Patterns !'
 ---
 # Deployment for a super simple HTTP server which
 # serves the value of an environment variable to the browser.
@@ -28,18 +28,18 @@ spec:
         app: webapp
     spec:
       containers:
-      - name: app
-        image: k8spatterns/mini-http-server
-        ports:
-        - containerPort: 8080
-        env:
-        # Message to print is taken from the ConfigMap as env var.
-        # Note that changes to the ConfigMap require a restart of the Pod
-        - name: MESSAGE
-          valueFrom:
-            configMapKeyRef:
-              name: webapp-config
-              key: message
+        - name: app
+          image: k8spatterns/mini-http-server
+          ports:
+            - containerPort: 8080
+          env:
+            # Message to print is taken from the ConfigMap as env var.
+            # Note that changes to the ConfigMap require a restart of the Pod
+            - name: MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: webapp-config
+                  key: message
 ---
 # Service for accessing the web server via port 8080
 apiVersion: v1
@@ -48,10 +48,10 @@ metadata:
   name: webapp
 spec:
   ports:
-  - name: http
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
   type: NodePort
   selector:
     app: webapp
