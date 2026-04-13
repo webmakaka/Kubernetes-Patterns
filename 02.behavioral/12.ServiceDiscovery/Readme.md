@@ -92,13 +92,6 @@ $ kubectl run dbg --image=k8spatterns/curl-jq --command -- sleep infinity && \
 <br/>
 
 ```shell
-// Check DNS entry
-# dig random-generator.default.svc.cluster.local
-```
-
-<br/>
-
-```shell
 / # env | grep RANDOM
 RANDOM_GENERATOR_PORT_8080_TCP_ADDR=10.97.116.136
 RANDOM_GENERATOR_SERVICE_HOST=10.97.116.136
@@ -112,8 +105,13 @@ RANDOM_GENERATOR_PORT_8080_TCP=tcp://10.97.116.136:8080
 <br/>
 
 ```shell
+// Check DNS entry
 / # dig random-generator.default.svc.cluster.local
+```
 
+<br/>
+
+```shell
 ***
 ;; ANSWER SECTION:
 random-generator.default.svc.cluster.local. 30 IN A 10.97.116.136

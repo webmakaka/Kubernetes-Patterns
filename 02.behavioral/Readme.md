@@ -10,7 +10,7 @@
   <li>✅ Сервис без сохранения состояния (Stateless Service)</li>
   <li>✅ Сервис с сохранением состояния (Stateful Service)</li>
   <li>✅ Обнаружение сервисов (Service Discovery)</li>
-  <li>Самоанализ</li>
+  <li>✅ Самоанализ (Self Awareness)</li>
 </ol>
 
 <br/><br/>
