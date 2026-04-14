@@ -37,7 +37,7 @@ https://github.com/k8spatterns/examples/
 **Часть 3: Структурные паттерны (Structural Patterns)**
 
 <ol start="14">
-  <li>Init-контейнеры</li>
+  <li>✅ Init-контейнеры (Init Container)</li>
   <li>Паттерн Sidecar</li>
   <li>Адаптер</li>
   <li>Посредник</li>

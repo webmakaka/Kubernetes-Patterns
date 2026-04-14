@@ -337,6 +337,13 @@ $ curl -s http://192.168.58.2/  | jq .
 }
 ```
 
+<br/>
+
+```shell
+$ minikube stop
+$ minikube delete
+```
+
 <br/><br/>
 
 ---
