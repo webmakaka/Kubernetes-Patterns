@@ -233,6 +233,12 @@ kubernetes.io/config.seen="2026-04-13T03:08:43.505066403Z"
 kubernetes.io/config.source="api"
 ```
 
+<br/>
+
+```shell
+$ minikube stop && minikube delete
+```
+
 <br/><br/>
 
 ---

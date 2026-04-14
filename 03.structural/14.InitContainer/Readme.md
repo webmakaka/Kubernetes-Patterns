@@ -343,15 +343,31 @@ $ echo $port
 <br/>
 
 ```shell
-// OK!
-$ curl -s http://192.168.58.2:$port/logs | head -10
+$ curl -s http://192.168.58.2:$port | jq
+{
+  "random": -1463790887,
+  "id": "05a1490a-b608-4627-8dc0-871449c2b8ba",
+  "version": "1.0"
+}
 ```
 
 <br/>
 
 ```shell
-$ minikube stop
-$ minikube delete
+$ curl -s http://192.168.58.2:$port/logs | head -10 | jq
+{
+  "timestamp": "2026-04-14T03:34:45.081+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "path": "/logs"
+}
+
+```
+
+<br/>
+
+```shell
+$ minikube stop && minikube delete
 ```
 
 <br/><br/>
