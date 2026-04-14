@@ -38,7 +38,7 @@ https://github.com/k8spatterns/examples/
 
 <ol start="14">
   <li>✅ Init-контейнеры (Init Container)</li>
-  <li>Паттерн Sidecar</li>
+  <li>✅ Паттерн Sidecar (Sidecar)</li>
   <li>Адаптер</li>
   <li>Посредник</li>
 </ol>

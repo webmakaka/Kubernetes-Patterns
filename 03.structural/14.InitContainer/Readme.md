@@ -7,7 +7,7 @@
 <br/>
 
 ```shell
-$ minikube start --mount --mount-string="$(pwd)/logs:/tmp/example"
+$ minikube start --mount --mount-string="$(pwd)/logs:/logs"
 ```
 
 <br/>
