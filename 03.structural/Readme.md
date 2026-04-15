@@ -6,7 +6,7 @@
   <li>✅ Init-контейнеры (Init Container)</li>
   <li>✅ Паттерн Sidecar (Sidecar)</li>
   <li>✅ Адаптер (Adapter)</li>
-  <li>Посредник</li>
+  <li>✅ Посредник (Ambassador)</li>
 </ol>
 
 <br/><br/>
