@@ -46,7 +46,7 @@ https://github.com/k8spatterns/examples/
 **Часть 4: Паттерны конфигурации (Configuration Patterns)**
 
 <ol start="18">
-  <li>Конфигурация в переменных среды</li>
+  <li>✅ Конфигурация в переменных среды (Envvar Configuration)</li>
   <li>Конфигурация в ресурсах</li>
   <li>Неизменяемая конфигурация</li>
   <li>Шаблон конфигурации</li>
