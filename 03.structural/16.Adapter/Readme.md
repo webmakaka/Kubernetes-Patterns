@@ -162,20 +162,14 @@ $ cat /tmp/logs/random.log
 <br/>
 
 ```shell
-$ port=$(kubectl get svc random-generator -o jsonpath='{.spec.ports[1].nodePort}')
+$ minikube_ip=$(minikube ip)
+$ port=$(kubectl get svc random-generator -o jsonpath='{.spec.ports[0].nodePort}')
 ```
 
 <br/>
 
 ```shell
-$ echo ${port}
-31992
-```
-
-<br/>
-
-```shell
-$ curl 192.168.58.2:${port}
+$ curl ${minikube_ip}:${port}
 random_generator_count 1
 random_generator_seconds_total 3.1732e-05
 ```

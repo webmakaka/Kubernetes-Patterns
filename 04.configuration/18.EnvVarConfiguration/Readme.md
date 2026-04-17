@@ -100,8 +100,8 @@ EOF
 <br/>
 
 ```shell
-$ port=$(kubectl get svc random-generator -o jsonpath='{.spec.ports[0].nodePort}')
 $ minikube_ip=$(minikube ip)
+$ port=$(kubectl get svc random-generator -o jsonpath='{.spec.ports[0].nodePort}')
 ```
 
 <br/>

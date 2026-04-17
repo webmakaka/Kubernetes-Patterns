@@ -47,7 +47,7 @@ https://github.com/k8spatterns/examples/
 
 <ol start="18">
   <li>✅ Конфигурация в переменных среды (Envvar Configuration)</li>
-  <li>Конфигурация в ресурсах</li>
+  <li>✅ Конфигурация в ресурсах (Configuration Resource)</li>
   <li>Неизменяемая конфигурация</li>
   <li>Шаблон конфигурации</li>
 </ol>

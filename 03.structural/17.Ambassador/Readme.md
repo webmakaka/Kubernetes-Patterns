@@ -104,8 +104,8 @@ random-generator   NodePort    10.101.76.50   <none>        8080:31623/TCP   2m5
 <br/>
 
 ```shell
-$ port=$(kubectl get svc random-generator -o jsonpath='{.spec.ports[0].nodePort}')
 $ minikube_ip=$(minikube ip)
+$ port=$(kubectl get svc random-generator -o jsonpath='{.spec.ports[0].nodePort}')
 ```
 
 <br/>
