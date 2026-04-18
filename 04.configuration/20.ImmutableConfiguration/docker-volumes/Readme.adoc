@@ -8,7 +8,7 @@ This example demonstrates using an immutable configuration container with plain 
 ----
 docker build -t k8spatterns/demo:1 -f Dockerfile-demo .
 ----
-     
+
 * Now create _config-dev_ container, which holds the configuration for the developer environment. The first step here is to create an image (with version number) and then a container from it
 
 [source,bash]
@@ -20,7 +20,7 @@ docker build --build-arg config=dev.properties -f Dockerfile-config -t k8spatter
 ----
 docker create --name config-dev k8spatterns/config-dev:1 .
 ----
-         
+
 * Start demo image with _config-dev_
 
 [source,bash]
