@@ -6,7 +6,7 @@
   <li>✅ Конфигурация в переменных среды (Envvar Configuration)</li>
   <li>✅ Конфигурация в ресурсах (Configuration Resource)</li>
   <li>✅ Неизменяемая конфигурация (Immutable Configuration)</li>
-  <li>Шаблон конфигурации</li>
+  <li>✅ Шаблон конфигурации (Configuration Template)</li>
 </ol>
 
 <br/><br/>
