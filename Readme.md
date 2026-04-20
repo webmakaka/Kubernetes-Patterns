@@ -55,7 +55,7 @@ https://github.com/k8spatterns/examples/
 **Часть 5: Паттерны безопасности (Security Patterns)**
 
 <ol start="22">
-  <li>Ограничение процессов</li>
+  <li>✅ Ограничение процессов (Process Containment)</li>
   <li>Сегментация сети</li>
   <li>Безопасная конфигурация</li>
   <li>Контроль доступа</li>
