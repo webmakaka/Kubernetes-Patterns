@@ -56,7 +56,7 @@ https://github.com/k8spatterns/examples/
 
 <ol start="22">
   <li>✅ Ограничение процессов (Process Containment)</li>
-  <li>Сегментация сети</li>
+  <li>✅ Сегментация сети (NetworkSegmentation)</li>
   <li>Безопасная конфигурация</li>
   <li>Контроль доступа</li>
 </ol>
