@@ -58,7 +58,7 @@ https://github.com/k8spatterns/examples/
   <li>✅ Ограничение процессов (Process Containment)</li>
   <li>✅ Сегментация сети (NetworkSegmentation)</li>
   <li>📖 Безопасная конфигурация (SecureConfiguration)</li>
-  <li>📖 Контроль доступа</li>
+  <li>📖 Контроль доступа (AccessControl)</li>
 </ol>
 
 **Часть 6: Более сложные паттерны (Advanced Patterns)**

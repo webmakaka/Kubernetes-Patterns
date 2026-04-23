@@ -304,11 +304,10 @@ HashiCorp Vault Sidecar Agent Injector (https://developer.hashicorp.com/vault/do
 
 <img src="../../img/chapter25-pic05.png">
 
+<br/><br/>
+
+---
+
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
+<a href="https://k8s.ru/">Предложить инженеру работу / подработку на проекте с kubernetes, microservices, machine learning, big data, golang</a>
