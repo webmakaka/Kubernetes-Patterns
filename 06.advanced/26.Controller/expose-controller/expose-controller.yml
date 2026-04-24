@@ -10,8 +10,8 @@ kind: RoleBinding
 metadata:
   name: expose-controller
 subjects:
-- kind: ServiceAccount
-  name: expose-controller
+  - kind: ServiceAccount
+    name: expose-controller
 roleRef:
   name: edit
   kind: ClusterRole
@@ -40,24 +40,24 @@ spec:
     spec:
       serviceAccountName: expose-controller
       containers:
-      - name: kubeapi-proxy
-        image: k8spatterns/kubeapi-proxy
-      - name: expose-controller
-        image: k8spatterns/curl-jq
-        env:
-        # The operator watches the namespace in which the controller
-        # itself is installed (by using the Downward API)
-        - name: WATCH_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        command:
-        - "sh"
-        - "/expose-script/expose-controller.sh"
-        volumeMounts:
-        - mountPath: "/expose-script"
-          name: expose-controller-script
+        - name: kubeapi-proxy
+          image: k8spatterns/kubeapi-proxy
+        - name: expose-controller
+          image: k8spatterns/curl-jq
+          env:
+            # The operator watches the namespace in which the controller
+            # itself is installed (by using the Downward API)
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - 'sh'
+            - '/expose-script/expose-controller.sh'
+          volumeMounts:
+            - mountPath: '/expose-script'
+              name: expose-controller-script
       volumes:
-      - name: expose-controller-script
-        configMap:
-          name: expose-controller-script
+        - name: expose-controller-script
+          configMap:
+            name: expose-controller-script

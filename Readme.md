@@ -31,7 +31,7 @@ https://github.com/k8spatterns/examples/
   <li>✅ Сервис без сохранения состояния (Stateless Service)</li>
   <li>✅ Сервис с сохранением состояния (Stateful Service)</li>
   <li>✅ Обнаружение сервисов (Service Discovery)</li>
-  <li>✅ Самоанализ (Self Awareness)</li>
+  <li>✅ Самоанализ (Self Awareness) (Downward API)</li>
 </ol>
 
 **Часть 3: Структурные паттерны (Structural Patterns)**
@@ -64,7 +64,7 @@ https://github.com/k8spatterns/examples/
 **Часть 6: Более сложные паттерны (Advanced Patterns)**
 
 <ol start="26">
-  <li>Контроллер</li>
+  <li>✅ Контроллер (Controller)</li>
   <li>Оператор</li>
   <li>Эластичное масштабирование</li>
   <li>Конструктор образов</li>
