@@ -65,7 +65,7 @@ https://github.com/k8spatterns/examples/
 
 <ol start="26">
   <li>✅ Контроллер (Controller)</li>
-  <li>Оператор</li>
+  <li>✅ Оператор (Operator)</li>
   <li>Эластичное масштабирование</li>
   <li>Конструктор образов</li>
 </ol>

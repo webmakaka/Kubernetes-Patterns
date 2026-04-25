@@ -424,7 +424,8 @@ $ minikube ip
 <br/>
 
 ```
-browser https://$(minikube ip)/mdn
+// OK!
+https://192.168.49.2/mdn
 ```
 
 <br/>
