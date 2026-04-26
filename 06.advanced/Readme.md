@@ -5,8 +5,8 @@
 <ol start="26">
   <li>✅ Контроллер (Controller)</li>
   <li>✅ Оператор (Operator)</li>
-  <li>✅ Эластичное масштабирование (Elastic Scale)</li>
-  <li>Конструктор образов</li>
+  <li>✅ Эластичное масштабирование (Elastic Scale) - hpa, vpa, ca</li>
+  <li>✅ Конструктор образов (ImageBuilder) - сборка образов контейнеров внутри kubernetes</li>
 </ol>
 
 <br/><br/>

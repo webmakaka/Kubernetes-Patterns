@@ -67,7 +67,7 @@ https://github.com/k8spatterns/examples/
   <li>✅ Контроллер (Controller)</li>
   <li>✅ Оператор (Operator)</li>
   <li>✅ Эластичное масштабирование (Elastic Scale)</li>
-  <li>Конструктор образов</li>
+  <li>✅ Конструктор образов (ImageBuilder)</li>
 </ol>
 
 <br/><br/>

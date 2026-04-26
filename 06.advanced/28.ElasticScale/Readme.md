@@ -1,4 +1,4 @@
-# Эластичное масштабирование (Elastic Scale)
+# Эластичное масштабирование (Elastic Scale) - hpa, vpa, ca
 
 <br/>
 
